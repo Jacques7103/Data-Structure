@@ -8,21 +8,21 @@ int calls = 0;
 
 //Creating a function that get 4 parameters which are the number of disks, the starting and ending position, and the pole that it will only pass through
 void Tower_Of_Hanoi(int num, char start, char end, char pass){
-    //Incrementing the calls
-    calls++;
     //Base Case
     if (num == 1){      //If it's the only disk left in the pole, it will be moved into the "end" pole
-        cout << "Top disk of " << start << " is moved into " << end << endl;    //Printing out what happened
+        calls++;        //Incrementing the calls
+        cout << "Moved disk 1 from pole " << start << " to pole " << end << endl;    //Printing out what happened
     } 
     // General Case
     else {
         Tower_Of_Hanoi(num - 1, start, pass, end);      //Moving the rest of the disk beside the biggest disk into the passing pole
-        Tower_Of_Hanoi(1, start, end, pass);            //Moving the biggest disk into the destination pole
+        cout << "Moved disk " << num << " from pole " << start << " to pole " << end << endl;       //Printing out the moved disk
         Tower_Of_Hanoi(num - 1, pass, end, start);      //Moving the rest of the disk from the passing pole into the destination pole
+        calls++;
     }
 }
 
-void resetCalls(){
+void resetCalls(){                                      //Creating resetCalls function to reset the calls
     calls = 0;
 }
 
