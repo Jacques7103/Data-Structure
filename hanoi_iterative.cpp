@@ -24,7 +24,7 @@ void Tower_Of_Hanoi(int num, char start, char end, char pass){
     Stack current;          //Creating current variable in Stack class
 
     while (num >= 1 or !TOH.empty()){       //Creating a while loop with condition num >= 1 and TOH stack isn't empty
-        while (num >= 1){                   //Creating a while loop with condition num >= 1
+        while (num >= 1){                   //Creating a while loop with condition num >= 1 -> to get the function of "(num - 1, start, pass, end)"
             Stack current;                  //Creating current variable in Stack class
 
             //Setting the variable with data
@@ -44,7 +44,7 @@ void Tower_Of_Hanoi(int num, char start, char end, char pass){
         TOH.pop();                          //Take out the data from the stack
         cout << "Move disk " << current.n << " from rod " << current.first << " to rod " << current.last << endl;       //Print out what happened
 
-        if (current.n >= 1){                //Creating the "function of (num - 1, pass, end, start)" -> Refer to the one in recursive
+        if (current.n >= 1){                //Creating the function of "(num - 1, pass, end, start)" -> Refer to the one in recursive
             start = current.go;
             pass = current.first;
             end = current.last;
