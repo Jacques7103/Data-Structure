@@ -17,7 +17,7 @@ void resetCalls(){          //Creating resetCalls function to reset the calls
     calls = 0;
 }
 
-//We get this function is from https://iq.opengenus.org/tower-of-hanoi/, which we have already understood.
+//We get this function is from https://iq.opengenus.org/tower-of-hanoi/, which we have already understood but couldn't find a way to create a similar working code
 //Creating a function that get 4 parameters which are number of disks, the starting and ending position, and the pole that it will only pass through
 void Tower_Of_Hanoi(int num, char start, char end, char pass){
     stack<Stack> TOH;       //Creating a stack
