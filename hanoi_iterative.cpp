@@ -17,6 +17,7 @@ void resetCalls(){          //Creating resetCalls function to reset the calls
     calls = 0;
 }
 
+//We get this function is from https://iq.opengenus.org/tower-of-hanoi/, which we have already understood.
 //Creating a function that get 4 parameters which are number of disks, the starting and ending position, and the pole that it will only pass through
 void Tower_Of_Hanoi(int num, char start, char end, char pass){
     stack<Stack> TOH;       //Creating a stack
@@ -42,7 +43,7 @@ void Tower_Of_Hanoi(int num, char start, char end, char pass){
 
         Stack current = TOH.top();          //Getting the latest inserted data into the stack
         TOH.pop();                          //Take out the data from the stack
-        cout << "Move disk " << current.n << " from rod " << current.first << " to rod " << current.last << endl;       //Print out what happened
+        cout << "Move disk " << current.n << " from pole " << current.first << " to pole " << current.last << endl;       //Print out what happened
 
         if (current.n >= 1){                //Creating the function of "(num - 1, pass, end, start)" -> Refer to the one in recursive
             start = current.go;
